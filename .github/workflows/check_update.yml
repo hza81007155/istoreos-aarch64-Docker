@@ -86,7 +86,7 @@ jobs:
           body: |
             iStoreOS 版本更新
 
-            istoreos: https://fw.koolcenter.com/iStoreOS/x86_64_efi
+            istoreos: https://fw.koolcenter.com/iStoreOS/armsr
             URL: ${{ steps.check.outputs.url }}
             日期: ${{ steps.check.outputs.date }}
           files: |
