@@ -117,7 +117,9 @@ jobs:
           context: /github/workspace
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/hza800755/istoreos:${{ steps.check.outputs.date }}
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/istoreos:${{ steps.check.outputs.date }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/istoreos:latest
 
       - name: Commit and push if changed
         if: steps.check.outputs.updated == 'true'
